@@ -1,0 +1,108 @@
+	      * {
+		   padding: 0;
+		   margin:0;
+		}  
+				
+		body {
+			font-family: Verdana, sans-serif;
+			color: #0000cc;
+			background-color: #fff;
+
+		}
+		
+		#global {
+			margin: 100px auto;
+			/* largeur ajustée */
+			width: 80%;
+			min-width: 820px;
+			border: 2px solid #0000cc;
+		}
+		
+		/* les fieldset principaux en flex */
+		form, fieldset.vote, fieldset.options, fieldset.boutons{
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+		}
+		
+		fieldset.vote, fieldset.options{
+			justify-content: space-between;
+		}
+
+        fieldset.colonne {
+            /* display:inline-block;  */
+            width:40%;
+			/* pour l'alignement vertical des fieldset: plus nécessaire
+			vertical-align: top; */
+			border: none;
+        }
+
+        label {
+            display:block;
+            /* width: 300px; 
+            margin-bottom: 20px;
+            margin-right: 100px;
+            text-align: right; */ 
+        }
+		
+		#identification {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			padding-right: 10%;
+		}
+		
+		#identification label{
+			margin-top: 2%;
+		}
+
+        fieldset.vote label, fieldset.options label {
+           /* display: inline;  
+            width: 30%; */
+            /*margin: 0 5%;
+            text-align: left; */
+        }
+
+        input {
+            width: 150px;
+        }
+
+        fieldset.vote input, fieldset.options input {
+            width: auto;
+            margin: 0 1%;
+        }
+
+        fieldset.commentaire textarea {
+            width: 100%;
+            resize:none;
+        }
+
+        fieldset.vote span {
+            display: inline-block;
+            width: 14px;
+            height: 15px;
+            background-image: url("../images/checkbox-icon-26.jpg");
+			/* permet de redimensionner l'image (trop grande)  */
+            background-size: 42px 30px;
+			/* on décale négativement en x pour cibler les icones du centre*/
+            background-position: -14px 15px;
+			/* alignement vertical */
+			vertical-align: bottom;
+			/* espacement */
+			margin-left: 2px;
+        }
+
+        fieldset.vote input {
+            display: none;
+        }
+		
+        fieldset.vote input:checked ~ span{
+            background-position: -14px -1px;
+        }	
+					
+		fieldset.boutons input {
+            width: 30%;
+        }
+		
+
+
